@@ -164,7 +164,7 @@ def display_remote_io(ip_address):
         cur_mac = format_mac(ip_holding_regs.registers)
         ip_holding_regs = client.read_holding_registers(HR_KI_003, 1)
         cur_version = format_version(ip_holding_regs.registers[0])
-
+  
 
         print("{0} - {1}, version:{2}.{3}.{4} ".format(
             ip_address, device_type_name(cur_version[0]), cur_version[1], cur_version[2], cur_version[3]), end='')
